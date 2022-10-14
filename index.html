@@ -13,7 +13,7 @@
     <h1 class="header">Tic-Tac-Toe</h1>
     <h2 id="msg">Welcome to the game!</h2>
 
-    <div class="gameboard">
+    <div class="game-board" id="game-board">
 
         <div class="tile" id="tile-1" onclick="gameBoard.playerMove(0)"></div>
         <div class="tile" id="tile-2" onclick="gameBoard.playerMove(1)"></div>
@@ -25,6 +25,11 @@
         <div class="tile" id="tile-8" onclick="gameBoard.playerMove(7)"></div>
         <div class="tile" id="tile-9" onclick="gameBoard.playerMove(8)"></div>
 
+    </div>
+
+    <div class="button-container">
+        <button onclick="gameBoard.clearBoard()">New Game</button>
+        <button>New Player</button>
     </div>
     
 </body>
