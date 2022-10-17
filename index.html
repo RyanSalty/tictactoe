@@ -9,27 +9,52 @@
     <script src="scripts.js" defer></script>
 </head>
 <body>
+    
+    <div class="menu">
+        <h1 class="header">Tic-Tac-Toe</h1>
+        <form class="new-player-form">
 
-    <h1 class="header">Tic-Tac-Toe</h1>
-    <h2 id="msg">Welcome to the game!</h2>
+            <label for="player-name">Name:</label>
+            <input type="text" name="player-name" id="player-name">
 
-    <div class="game-board" id="game-board">
+            <label for="player-turn">Turn-Order:</label>
+            <fieldset class="player-turn" id="player-turn">
+                <input type="radio" name="turn-order" id="turn-first" value="first">
+                <label for="turn-first">First</label>
+                <input type="radio" name="turn-order" id="turn-second" value="second">
+                <label for="turn-second">Second</label>
+            </fieldset>
+            
+            <label for="player-symbol">Symbol:</label>
+            <fieldset class="player-symbol" id="player-symbol">
+                <input type="radio" name="symbol" id="symbol-x" value="x">
+                <label for="turn-first">X</label>
+                <input type="radio" name="symbol" id="symbol-o" value="o">
+                <label for="turn-second">O</label>
+            </fieldset>
+        </form>
+        <button class="new-player-btn" onclick ="gameBoard.newPlayer()">New Player</button>
 
-        <div class="tile" id="tile-1" onclick="gameBoard.playerMove(0)"></div>
-        <div class="tile" id="tile-2" onclick="gameBoard.playerMove(1)"></div>
-        <div class="tile" id="tile-3" onclick="gameBoard.playerMove(2)"></div>
-        <div class="tile" id="tile-4" onclick="gameBoard.playerMove(3)"></div>
-        <div class="tile" id="tile-5" onclick="gameBoard.playerMove(4)"></div>
-        <div class="tile" id="tile-6" onclick="gameBoard.playerMove(5)"></div>
-        <div class="tile" id="tile-7" onclick="gameBoard.playerMove(6)"></div>
-        <div class="tile" id="tile-8" onclick="gameBoard.playerMove(7)"></div>
-        <div class="tile" id="tile-9" onclick="gameBoard.playerMove(8)"></div>
 
     </div>
 
-    <div class="button-container">
-        <button onclick="gameBoard.clearBoard()">New Game</button>
-        <button>New Player</button>
+    <div class="main-content">
+        
+        <h2 id="msg">Please enter your player information to start the game</h2>
+            <div class="game-board disabled" id="game-board">
+                <div class="tile" id="tile-1" onclick="gameBoard.playerMove(0)"></div>
+                <div class="tile" id="tile-2" onclick="gameBoard.playerMove(1)"></div>
+                <div class="tile" id="tile-3" onclick="gameBoard.playerMove(2)"></div>
+                <div class="tile" id="tile-4" onclick="gameBoard.playerMove(3)"></div>
+                <div class="tile" id="tile-5" onclick="gameBoard.playerMove(4)"></div>
+                <div class="tile" id="tile-6" onclick="gameBoard.playerMove(5)"></div>
+                <div class="tile" id="tile-7" onclick="gameBoard.playerMove(6)"></div>
+                <div class="tile" id="tile-8" onclick="gameBoard.playerMove(7)"></div>
+                <div class="tile" id="tile-9" onclick="gameBoard.playerMove(8)"></div>
+            </div>
+        <div class="button-container">
+            <button onclick="gameBoard.clearBoard()">New Game</button>
+        </div>
     </div>
     
 </body>
